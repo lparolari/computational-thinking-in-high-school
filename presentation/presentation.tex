@@ -1,0 +1,421 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personalization by Luca Parolari <luca.parolari23@gmail.com>
+
+\documentclass{beamer}
+
+%-------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%-------------------------------------------------------------------
+
+%%% PACKAGES
+\usepackage[utf8]{inputenc}  % italian symbols.
+\usepackage[T1]{fontenc}     % define T1 charset for out files.
+\usepackage[italian]{babel}  % italian latex typo conventions.
+\usepackage{csquotes}        % needed by babel.
+\usepackage{amsmath}         % math features.
+\usepackage{amsthm}          % math theorems.
+\usepackage{amssymb}         % math symbols.
+\usepackage{graphicx}        % images managing.
+\usepackage{booktabs}        % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{algorithm}       % algorithm block.
+\usepackage{algcompatible}
+\usepackage{algpseudocode}   % style for (autoimported) package algorithmicx.
+
+%%% MODE
+\mode<presentation> {
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a
+% list of all the themes, uncomment each in turn to see what they
+% look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}        % commented left
+%\usetheme{Berkeley}      % menu left
+%\usetheme{Berlin}
+%\usetheme{Boadilla}      % nice, no top menu
+%\usetheme{CambridgeUS}   % nice menu and footer
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}     % top bullets, no info below
+%\usetheme{Goettingen}    % no
+%\usetheme{Hannover}      % no
+%\usetheme{Ilmenau}       % not bad: bullets, sections, ... but too many rows
+%\usetheme{JuanLesPins}   % tree menu
+%\usetheme{Luebeck}       % very nice menu
+\usetheme{Madrid}        % default
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}    % clean
+%\usetheme{Rochester}
+%\usetheme{Singapore}     % not bad, no info below
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}     % horrible
+%\usecolortheme{beaver}        % red blue
+%\usecolortheme{beetle}        % horrible
+\usecolortheme{crane}         % nice: yellow, orange
+%\usecolortheme{dolphin}       % simil default
+%\usecolortheme{dove}          % black and white
+%\usecolortheme{fly}           % horrible
+%\usecolortheme{lily}          % nice, clean blue
+%\usecolortheme{orchid}        % like default
+%\usecolortheme{rose}          % like default, very good
+%\usecolortheme{seagull}       % grey
+%\usecolortheme{seahorse}      % light lavanda
+%\usecolortheme{whale}         % like default
+%\usecolortheme{wolverine}     % yello blue
+
+\usefonttheme{professionalfonts}
+
+% To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}
+
+% To replace the footer line in all slides with a simple slide 
+% count uncomment this line
+%\setbeamertemplate{footline}[page number]
+
+% To remove the navigation symbols from the bottom of all 
+% slides uncomment this line
+\setbeamertemplate{navigation symbols}{} 
+
+% blocks
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+
+} % /mode<presentation>
+
+% top menu
+\useoutertheme[subsection=false]{miniframes}
+
+%\setbeamercolor{block title}{use=structure,fg=white,bg=blue!75!black}
+%\setbeamercolor{block body}{use=structure,fg=black,bg=white!20!white}
+
+% step by step
+\setbeamercovered{transparent}
+
+
+%-------------------------------------------------------------------
+%	TITLE PAGE
+%-------------------------------------------------------------------
+
+% The short title appears at the bottom of every slide, 
+% the full title is only on the title page
+\title[
+  Approfonfimento AALP
+]{
+    ``Principi dell'Informatica'':\\ il Corso Necessario nelle Scuole di Secondo Grado
+}
+%\subtitle{}
+
+\author[Luca Parolari]{
+  Luca Parolari
+}
+
+\institute[UNIPD]
+{
+  Università di Padova \\
+  Dipartimento di Matematica \\
+  Corso di Laurea Magistrale in Informatica
+}
+\date{marzo 2020}
+
+
+
+\begin{document}
+
+%------------------------------------------------
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Panoramica della presentazione}
+  \tableofcontents
+\end{frame}
+
+%-------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%-------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Introduzione}
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Le problematiche attuali} 
+  %\framesubtitle{}
+
+  \begin{itemize}
+    \item L'informatica non è ancora socialmente accettata da tutti
+    \item Conoscenze pregresse spesso inesistenti
+    \item La qualità dei corsi di informatica attuali è scarsa
+    \item Le modalità didattiche impiegate sono non interessanti e passive per lo studente
+    \item Insegnanti spesso impreparati e/o non al passo con i tempi
+  \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Motivazioni}
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Perché bisognerebbe cambiare le cose?} 
+
+  \begin{itemize}
+    \item Informatica ubiqua e necessaria nella società odierna
+    \item Dal punto di vista scientifico-culturale, imparare l'informatica significa sviluppare competenze logiche e capacità di risolvere problemi in modo creativo ed efficiente
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Il pensiero computazionale}
+
+  Saper pensare ``computazionalmente'' significa essere in grado di sviluppare soluzioni che siano però eseguibili da un agente.
+  
+  \vspace{1em}
+
+  Inoltre, l'esecutore è inconsapevole ed
+  \begin{itemize}
+    \item esegue istruzioni di cui non conosce il significato
+    \item su dati di cui non conosce il significato
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Le sette Big Ideas}
+
+  Il pensiero computazionale è stato riassunto in sette concetti fondamentali.
+  
+  \begin{enumerate}
+    \item La creatività, come forza propulsiva dell'innovazione
+    \item L'astrazione, per concentrarsi su aspetti più rilevanti
+    \item I dati, per la creazione di conoscenza
+    \item Gli algoritmi, per sviluppare soluzioni efficienti
+    \item La programmazione, per risolvere problemi
+    \item Internet, per comunicare e collaborare
+    \item L'impatto globale, da tenere in considerazione per ogni scelta in ambito informatico
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Le sei competenze}
+
+  Il pensiero computazionale comporta anche del ``saper fare'', riassunto in sei competenze.
+  
+  \begin{enumerate}
+    \item Mettere in relazione i concetti dell'informatica
+    \item Creare artefatti computazionali
+    \item Definire modelli e simulazioni
+    \item Analizzare problemi ed artefatti
+    \item Comunicare i concetti
+    \item Collaborare con altre persone
+  \end{enumerate}
+\end{frame}
+
+%------------------------------------------------
+\section{Come fare?}
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Lo stato dell'arte}
+
+  Attualmente molte organizzazioni si sono mosse per creare un corso valido che possa sopperire a questa necessità, per esempio
+  
+  \begin{itemize}
+    \item \emph{Code.org}, che offre una quantità smisurata di materiale per corsi adatti ad ogni fascia di età
+    \item \emph{Programma il Futuro}, un progetto italiano simile a Code.org
+    \item \emph{CINI} (Consorzio Interuniversitario Nazionale per l'Informatica), che coordina e promuove le attività scientifiche legate all'informatica
+    \item Università di Berkeley con \emph{BJC} (the Beauty and the Joy of Computing), con un corso di informatica di base pre-universitario
+  \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Il corso}
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Principi dell'Informatica}
+  \framesubtitle{Caratteristiche}
+
+  \begin{table}
+  \begin{tabular}{l p{75mm}}
+    \textbf{Target} & Scuola secondaria di secondo grado (età 14-19) \\
+    \textbf{Prerequisiti} & Nessuno per gli studenti, conoscenze base di informatica per i professori \\
+    \textbf{Tipo lezioni} & Collaborative e attive per lo studente \\
+    \textbf{Supporto} & Materiale integrato nelle lezioni \\
+    \textbf{Durata} & Circa 150-200 ore
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Struttura del corso}
+
+  \begin{itemize}
+    \item Sviluppa un percorso narrativo basato su internet e innovazione per interconnettere tutti i temi
+    \item Sei unità didattiche che trattano le sette \emph{Big Ideas}
+    \item Organizzazione flessibile
+    \item Prova alla fine del corso
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Struttura delle lezioni}
+
+  \begin{itemize}
+    \item Diverse dalle lezioni tradizionali
+    \item Sviluppo lungo tre fasi (introduzione, sviluppo, conclusione)
+    \item Favorisce la collaborazione di gruppo
+    \item Approccio centrato sullo studente, lo studente partecipa in modo attivo
+    \item Il materiale di studio è fornito direttamente con la lezione
+    \item Favorisce l'utilizzo di strumenti informatici per la comprensione dei concetti
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unità didattiche}
+
+  \begin{enumerate}
+    \item Internet
+    \item Dati digitali
+    \item Algoritmi e programmazione
+    \item Big Data e privacy
+    \item Realizzazione di App
+    \item Prova finale
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{UD: Internet}
+
+  \begin{itemize}
+    \item Punto di partenza, solitamente anche il più conosciuto da parte dello studente
+    \item Esplorare problemi della rappresentazione dell'informazione in formato digitale
+    \item Nel primo capitolo si affrontano le tematiche della trasmissione della rappresentazione tramite codifiche
+    \item Nel secondo capitolo si affronta il problema della costruzione di internet, sviluppando protocolli e stratificandoli
+    \item Attività pratiche
+    \begin{itemize}
+      \item Simulatore di internet
+      \item Prototipazione di un modello semplificato di internet
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{UD: Dati digitali}
+
+  \begin{itemize}
+    \item Esplorare i problemi della rappresentazione ed elaborazione digitale dei dati
+    \item Gli studenti imparano a rappresentare, pulire ed elaborare i dati. Vengono esplorate tecniche di compressione dei dati
+    \item Analisi dei dati con strumenti di visione per individuarne pattern ricorrenti e tendenze
+    \item Rilevanza dell'errore nei dati e conseguenti problematiche nell'inferenza di conoscenze
+    \item Attività pratiche
+    \begin{itemize}
+      \item Costruzione di una propria tecnica di compressione dei dati
+      \item Analisi di un insieme di dati grezzo e scrittura di un artefatto che spieghi cosa si è potuto inferire dai dati
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{UD: Algoritmi e programmazione}
+
+  \begin{itemize}
+    \item Esplorare il concetto di algoritmo e di programmazione
+    \item Introduzione agli algoritmi e prima applicazioni in JavaScript
+    \item Programma informatico come insieme di regole, analogia con i protocolli di Internet
+    \item Introduzione ad \emph{AppLab} per la costruzzione di App JavaScript
+    \item Realizzazione di programmi top-down e introduzione man mano degli strumenti del linguaggio di programmazione
+    \item Attività pratica: costruzione di un'applicazione
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{UD: Big Data e privacy}
+
+  \begin{itemize}
+    \item Esplorare l'importanza dei dati e le basi della crittografia moderna
+    \item Riflessione sulla quantità di dati nel mondo moderno ed effetti positivi/negativi che possono avere sulla società
+    \item Studio della crittografia applicata in modo da ottenere la privacy
+    \item Introduzione all'idea del problema computazionalmente difficile
+    \item Attività pratica sui big data e sicurezza con crittografia
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{UD: Realizzazione App}
+
+  \begin{itemize}
+    \item Approfondire la programmazione tramite JavaScript e la programmazione per eventi
+    \item Prerequisito: unità 3 (Algoritmi e programmazione)
+    \item Approfondimento dei concetti base della programmazione (funzioni, cicli, leggere la documentazione, collaborare, ...)
+    \item Costruzione di un'applicazione semplice ma completa
+    \item Attività pratica con \emph{AppLab}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{UD: Prova finale}
+
+  \begin{itemize}
+    \item Due progetti conclusivi
+    \item Creazione di un programma in autonomia (circa 12 ore)
+    \item Studio di un'innovazione informatica
+  \end{itemize}
+
+  \begin{itemize}
+    \item L'unità deve essere modificata dal docente di modo che sia adattata alla situazione della classe
+  \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Conclusioni}
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Conclusioni}
+
+  \begin{itemize}
+    \item Il corso ha moltissime potenzialità: moderno, ben strutturato, adatto a tutti
+    \item Il corso è completamente slegato dalle conoscenze del professore
+    \item Lo studente diventa attore della lezione, non un semplice ascoltatore passivo
+  \end{itemize}
+  \begin{itemize}
+    \item Problema: attaccamento ``all'italiana'' alle abitudini e alla cultura
+  \end{itemize}
+
+  \vspace{1em}
+
+  \centerline{Ce la faremo?}
+\end{frame}
+
+\begin{frame}
+  \Huge{\centerline{Grazie per l'attenzione}}
+\end{frame}
+
+%-------------------------------------------------------------------
+
+\end{document}
