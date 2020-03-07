@@ -1,6 +1,5 @@
 MAINFILE = presentation
 SRC = $(shell pwd)
-BUILD_DIR = _build
 
 # ***********************************************************
 # ****** MAIN
@@ -9,7 +8,7 @@ all:  # all do nothing by default
 .PHONY: all
 
 pdf: pdf1  # default
-pdf1: pdflatex bib pdflatex
+pdf1: pdflatex
 pdf2: pdfdocker
 .PHONY: pdf pdf1 pdf2
 
@@ -22,13 +21,11 @@ prettify: backup tabs2spaces rmTrailingSpaces
 # build using docker
 pdfdocker:
 	docker pull dxjoke/tectonic-docker
-	docker run --mount src=$(SRC),target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 $MAINFILE.tex; biber $MAINFILE; tectonic $MAINFILE.tex"
+	docker run --mount src=$(SRC),target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 $MAINFILE.tex"
 
 # build using pdflatex
 pdflatex: 
 	pdflatex $(MAINFILE)
-bib:
-	biber $(MAINFILE)
 
 # read
 read:
@@ -85,4 +82,3 @@ cleanall: clean
 	-rm -f *.fls
 	-rm -f *.pyg
 	-rm -f *.run.xml
-	-rm -rf $(BUILD_DIR)

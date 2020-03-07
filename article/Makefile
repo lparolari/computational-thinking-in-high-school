@@ -1,6 +1,5 @@
 MAINFILE = article
 SRC = $(shell pwd)
-BUILD_DIR = _build
 
 # ***********************************************************
 # ****** MAIN
@@ -25,7 +24,7 @@ pdfdocker:
 	docker run --mount src=$(SRC),target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 $MAINFILE.tex; biber $MAINFILE; tectonic $MAINFILE.tex"
 
 # build using pdflatex
-pdflatex: 
+pdflatex:
 	pdflatex $(MAINFILE)
 bib:
 	biber $(MAINFILE)
@@ -85,4 +84,3 @@ cleanall: clean
 	-rm -f *.fls
 	-rm -f *.pyg
 	-rm -f *.run.xml
-	-rm -rf $(BUILD_DIR)
