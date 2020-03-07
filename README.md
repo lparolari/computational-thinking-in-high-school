@@ -15,10 +15,10 @@ offered by _Programma il futuro_ for the high school students.
 
 ## 📥 Download
 
-Latest versions
+Latest version
 
-- The article in [pdf](TODO)
-- The presentation in [pdf](TODO)
+- The article in [pdf](https://github.com/lparolari/computational-thinking-in-high-school/releases/latest/download/article.pdf)
+- The presentation in [pdf](https://github.com/lparolari/computational-thinking-in-high-school/releases/latest/download/presentation.pdf)
 
 See the [releases page](https://github.com/lparolari/computational-thinking-in-high-school/releases) for other versions.
 
