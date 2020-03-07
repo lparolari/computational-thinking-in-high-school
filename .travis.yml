@@ -3,7 +3,7 @@ language: generic
 services: docker
 
 script:
-  - build.sh
+  - cd ${TRAVIS_BUILD_DIR}; ./build.sh
 
 deploy:
   provider: releases
