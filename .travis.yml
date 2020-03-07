@@ -1,0 +1,18 @@
+sudo: required
+language: generic
+services: docker
+
+script:
+  - cd ${TRAVIS_BUILD_DIR}; ./build.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: PuEDIRdoY+gNrVBUjrAwsPQAN9idoI0qkFm3/DVarGzlUz0l0G492MJo+WAtgtfmXFMXVpqKWp/ar+8dfgn8c4xJahGwVXAv1gK6KFO+xYDaVn+f0n2UA1FMvOpY73RsnOMoW2QFOf7fP5c1Yr96N6wt4dlL5kK39Q++BFRCj2cXJOxifHSMiwYkkHTl+NbkXrmT/BqUKAZp5UycNqo9gZ2a6v1MblyUoaiIEvHquTab+dJooYqSBi14UJyaEl0hg1sbVUvpDSBaF5JulXDV8H+GiU2mVWVkxhDssBZ4o4h7r4P0Wg2MgQtNHSmhAGy51r9iTqfo5xhO9fxHSBwx6MQZpwntOfzPSCPuLzxvoez/GUIJNN1tgZnwlhYtSlDi0vyUIJrrmpf2fO8W3Rk1Ge3UxeIFr9Y2YqczRZeTMkAyuYnlT+SluveNN6gCSD6KL9w54NQEC+KQ/Upjw+G3YC0UKn54QE0IhHdaLu93qXQ3MP/TjnlhAylGVloiw0o5gf2C9OjVjuCM+l4o6+mbssuvsZTEhF6f9BfSyxUkxBrrbEP3H7CV8Er7vzLloF+tD0A2MKlFQGL/eeVnS6+7gFMQcTl4BGbWdKg7SgwVSjNo95rE/NlTNT+pClk1NvgC2KxBlUOcdNdqoWaUzW2spGgk5smR2h7lEB1uB0Hv6ck=
+  file:
+    - $TRAVIS_BUILD_DIR/article.pdf
+    - $TRAVIS_BUILD_DIR/presentation.pdf
+  skip_cleanup: true
+  on:
+    repo: lparolari/computational-thinking-in-high-school
+    # tags: true

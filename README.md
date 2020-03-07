@@ -1,5 +1,7 @@
 # Computational Thinking in High School
 
+[![Build Status](https://travis-ci.com/lparolari/computational-thinking-in-high-school.svg?token=VSm1u6swXqyzsdGeq7Kp&branch=master)](https://travis-ci.com/lparolari/computational-thinking-in-high-school) ![GitHub All Releases](https://img.shields.io/github/downloads/lparolari/computational-thinking-in-high-school/total) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/lparolari/computational-thinking-in-high-school/issues/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 > Computer Science Principles: What We Need in High Schools.
 
 This project wants to be a critical analysis of the current situation
@@ -11,7 +13,21 @@ organizations around over the world has done until now in that sense
 and I describe the course _Principi dell'Informatica_, the course
 offered by _Programma il futuro_ for the high school students.
 
+## 📥 Download
 
+Latest versions
+
+- The article in [pdf](TODO)
+- The presentation in [pdf](TODO)
+
+See the [releases page](https://github.com/lparolari/computational-thinking-in-high-school/releases) for other versions.
+
+## 📋 Contents
+
+In this repository you can find the LaTeX source code for the
+[article](article/article.tex) that I wrote for this topic and the
+LaTeX source for the [presentation](presentation/presentation.tex)
+I used in my talk.
 
 ## 👤 Author
 
