@@ -15,4 +15,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: lparolari/computational-thinking-in-high-school
-    # tags: true
+    branch: master
+    tags: true
