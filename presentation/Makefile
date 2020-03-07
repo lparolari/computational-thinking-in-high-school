@@ -21,7 +21,7 @@ prettify: backup tabs2spaces rmTrailingSpaces
 # build using docker
 pdfdocker:
 	docker pull dxjoke/tectonic-docker
-	docker run --mount src=$(SRC),target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 $MAINFILE.tex"
+	docker run --mount src=$(SRC),target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic --keep-intermediates --reruns 0 ${MAINFILE}.tex"
 
 # build using pdflatex
 pdflatex: 
